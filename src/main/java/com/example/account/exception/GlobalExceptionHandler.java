@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(DataIntegrityViolationException.class)
-    public ErrorResponse handleIntegrityViolationException(DataIntegrityViolationException e){
+    public ErrorResponse handleDataIntegrityViolationException(DataIntegrityViolationException e){
         log.error("DataIntegrityViolationException is occurred", e);
 
         return new ErrorResponse(INVALID_REQUEST,INVALID_REQUEST.getDescription());
